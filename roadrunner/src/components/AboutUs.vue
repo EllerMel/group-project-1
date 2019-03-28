@@ -2,14 +2,14 @@
   <div class="jumbotron jumbotron-fluid" id="about">
     <div class="container">
       <div class="row">
-        <div class="col">
-          <center>
+        <div class="col" id="about2">
+         
             <h1 id="AboutUs">
               <strong>About Us</strong>
             </h1>
             <br>
-          </center>
-          
+         
+         
           <p>Road-Runner Exotic Car Rental allows you to experience a thrill that will last long after the rental return.</p>
           <p>Specializing in exotic, rare, and and exclusive cars, we provide a service unmatched by the car industry.</p>
           <p>additional text additional text additional text additional text additional text additional text additional text</p>
@@ -83,6 +83,12 @@
 #about {
   background-color: #F0F6F9;
 }
+
+p {
+  text-align: center;
+
+}
+
 
 
 </style>
