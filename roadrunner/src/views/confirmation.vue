@@ -13,7 +13,7 @@
 
 
 export default {
-  name: 'confirmation',
+  name: 'Confirmation',
   components: {
 
     CarDetails

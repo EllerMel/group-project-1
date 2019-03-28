@@ -5,11 +5,11 @@
     <div class="text-block">
       <h1>ROAD-RUNNER</h1>
       <h3>Exotic Car Rental</h3>
-
-      <button type="button" class="btn btn-dark btn-lg">SEARCH</button>
-      <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
-      <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
-
+      
+      <a href="#inventory" class="btn btn-dark btn-lg">SEARCH</a>
+       <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
+            <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
+  
       <br>
       <br>
     </div>

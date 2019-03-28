@@ -16,6 +16,10 @@
           <b-navbar-brand href="/#AboutUs">ABOUT US</b-navbar-brand>
         </b-navbar-nav>
 
+        <b-navbar-nav>
+          <b-navbar-brand href="#inventory">INVENTORY</b-navbar-brand>
+        </b-navbar-nav>
+
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
