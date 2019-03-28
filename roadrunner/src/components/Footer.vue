@@ -6,9 +6,9 @@
           <footer class="footer text-center">
             <div class="container">
               <div class="row">
-                <div class="col-md-6 mb-6 mb-xs">
+                <div class="col-md-7 mb- mb-xs">
                   <h4 class="text-uppercase mb-4" id="location">LOCATION</h4>
-                  <p class="lead mb-0" id="location2">
+                  <p class="lead mb-0 text-center" id="location2">
                     PUT YOUR LOCATION HERE
                     <br>AND ALSO HERE
                   </p>
@@ -19,10 +19,10 @@
                     <li class="list-inline-item">
                       <a
                         class="btn btn-outline-light btn-social text-center rounded-circle"
-                        href="#"
-                      >
+                        href="#">
+                      
                         <ion-icon name="logo-google"></ion-icon>
-                        <i class="fab fa-fw fa-facebook-f"></i>
+                        <i class="google"></i>
                       </a>
                     </li>
                     <li class="list-inline-item">
@@ -30,8 +30,9 @@
                         class="btn btn-outline-light btn-social text-center rounded-circle"
                         href="#"
                       >
-                        <i class="fab fa-fw fa-google-plus-g"></i>
                         <ion-icon name="logo-model-s"></ion-icon>
+                        <i class="model-s"></i>
+                        
                       </a>
                     </li>
                     <li class="list-inline-item">
@@ -39,7 +40,7 @@
                         class="btn btn-outline-light btn-social text-center rounded-circle"
                         href="#"
                       >
-                        <i class="fab fa-fw fa-twitter"></i>
+                        <i class="twitter"></i>
                         <ion-icon name="logo-facebook"></ion-icon>
                       </a>
                     </li>
@@ -48,7 +49,7 @@
                         class="btn btn-outline-light btn-social text-center rounded-circle"
                         href="#"
                       >
-                        <i class="fab fa-fw fa-linkedin-in"></i>
+                        <i class="instagram"></i>
                         <ion-icon name="logo-instagram"></ion-icon>
                       </a>
                     </li>
@@ -57,7 +58,7 @@
                         class="btn btn-outline-light btn-social text-center rounded-circle"
                         href="#"
                       >
-                        <i class="fab fa-fw fa-dribbble"></i>
+                        <i class="twitter"></i>
                         <ion-icon name="logo-twitter"></ion-icon>
                       </a>
                     </li>
@@ -79,10 +80,17 @@
   font-family: "Fugaz One", cursive;
   background-color: #343a40;
   color: white;
+  
 }
-#button1 {
-  background-color: white;
+
+#location {
+    text-align: center;
 }
+
+footer, p {
+    text-align: center;
+}
+
 </style>
 
 
