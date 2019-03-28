@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-<template>
-  <div class="confirmation">
-    <h1>This is Shawn's confirmation page</h1>
-  </div>
-</template>
-
-=======
->>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af
 
 <template>
   <div class="confirmation">
@@ -31,7 +21,4 @@ export default {
   }
 }
 </script>
-<<<<<<< HEAD
 
-=======
->>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af

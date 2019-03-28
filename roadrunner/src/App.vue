@@ -1,15 +1,11 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-<<<<<<< HEAD
   
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/confirmation">About</router-link>
     </div>
-=======
-
->>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af
     <router-view/>
   </div>
 </template>
