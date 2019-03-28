@@ -3,17 +3,17 @@
   <b-card
     :title="carObj.model"
     :img-src="carObj.img"
-    :img-alt="carDetails"
+    
     img-top
-    :tag="carDetails"
+    
     style="max-width: 20rem;"
     class="mb-2"
   >
-    <b-card-text>
+    <b-card-text class="text-center" style="color: aliceblue">
       {{carObj.year}} {{carObj.make}} {{carObj.model}}.
     </b-card-text>
 
-    <router-link to="/confirmation" class="btn btn-primary btn-lg">Rent</router-link>
+    <router-link :to="{ path: 'confirmation', query: { carID: carObj.id }}" class="btn btn-primary btn-lg">Rent</router-link>
   </b-card>
 </div>
 </template>
@@ -26,9 +26,12 @@ export default {
       
   },
   computed: {
-    cardetails(){
+    carDetails(){
       return this.carObj.make + " " + this.carObj.model
-    }
+    },
+    carURL(){
+      return "/confirmation?carID=" + this.carObj.id
+    },
   }
 }
 </script>
@@ -37,7 +40,8 @@ export default {
 <style scoped>
 .card {
   background-color: rgb(112, 112, 112);
-  color:aliceblue
+  color:aliceblue;
+  text-align: center;
 }
 img {
   max-width: 100%;

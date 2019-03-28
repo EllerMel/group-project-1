@@ -148,41 +148,6 @@ const state = {
         senior: true
       }
     ],
-    featuredCars:[
-      {
-        id: "C1",
-        make: "Nissan",
-        model: "GT-R",
-        year: "2016",
-        color: "Black",
-        availabilty: false,
-        isPromo: true,
-        img: "../img/2016NissanGT-R.png",
-        location: []
-      },
-      {
-        id: 'C4',
-        make: "BMW",
-        model: "I8",
-        year: "2016",
-        color: "White",
-        availabilty: false,
-        isPromo: true,
-        img: "../img/2016BMWi8.png",
-        location: []
-      },
-      {
-        id: "C8",
-        make: "Lamborghini",
-        model: "Aventador",
-        year: "2017",
-        color: "Green",
-        availabilty: false,
-        isPromo: true,
-        img: "../img/2017LamborghiniAventadorRoadster.png",
-        location: []
-      },
-    ],
 }
 
 export default new Vuex.Store({
@@ -190,4 +155,9 @@ export default new Vuex.Store({
   actions, 
   plugins,
   mutations,
+  getters: {
+    promotedCars: state => {
+      return state.cars.filter(cars => cars.isPromo)
+    }
+  }
 })

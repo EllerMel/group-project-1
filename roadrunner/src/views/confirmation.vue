@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <template>
   <div class="confirmation">
@@ -5,6 +6,8 @@
   </div>
 </template>
 
+=======
+>>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af
 
 <template>
   <div class="confirmation">
@@ -20,7 +23,7 @@
 
 
 export default {
-  name: 'confirmation',
+  name: 'Confirmation',
   components: {
 
     CarDetails
@@ -28,4 +31,7 @@ export default {
   }
 }
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af

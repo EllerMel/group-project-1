@@ -1,23 +1,22 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
+<<<<<<< HEAD
   
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/confirmation">About</router-link>
     </div>
+=======
+
+>>>>>>> 95df15ac566715616ecd0af451ba19af7318f8af
     <router-view/>
-    
   </div>
 </template>
 
 <script>
-
-
 import NavBar from "./components/NavBar.vue";
 import { mapState } from 'vuex';
-
-
 
 export default {
   name: "app",
@@ -32,7 +31,7 @@ export default {
     year: state => state.cars.year,
     color: state => state.cars.color,
     availability: state => state.cars.availability,
-    isPromoted: state => state.cars.isPromoted,
+    isPromo: state => state.cars.isPromo,
     img: state => state.cars.img,
     location: state => state.cars.location
   }),
@@ -47,6 +46,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>

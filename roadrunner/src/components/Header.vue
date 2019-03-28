@@ -6,25 +6,17 @@
       <h1>ROAD-RUNNER</h1>
       <h3>Exotic Car Rental</h3>
       
-      <button type="button" class="btn btn-dark btn-lg">SEARCH</button>
+      <a href="#inventory" class="btn btn-dark btn-lg">SEARCH</a>
        <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
             <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
   
-           
       <br>
       <br>
-
- 
     </div>
   </div>
 </template>
 
 <style scoped>
-
-
-
-
-
 h1,
 h3,
 .btn {
@@ -53,13 +45,13 @@ h3,
     position: absolute;
     bottom: 20px;
     left: 20px;
-   background-color:rgba(21, 22, 22, 0.7);
-  
+    background-color: rgba(21, 22, 22, 0.7);
+
     color: white;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -68,13 +60,13 @@ h3,
     position: absolute;
     bottom: 20px;
     left: 20px;
-  background-color:rgba(21, 22, 22, 0.7);
-  
+    background-color: rgba(21, 22, 22, 0.7);
+
     color: white;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -83,13 +75,13 @@ h3,
     position: absolute;
     bottom: 20px;
     left: 20px;
-   background-color:rgba(21, 22, 22, 0.7);
-  
+    background-color: rgba(21, 22, 22, 0.7);
+
     color: white;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -98,13 +90,13 @@ h3,
     position: absolute;
     bottom: 100px;
     left: 180px;
-    background-color:rgba(21, 22, 22, 0.7);
-  
+    background-color: rgba(21, 22, 22, 0.7);
+
     color: white;
     padding-left: 70px;
     padding-right: 70px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -136,19 +128,17 @@ h3,
 
 
 <script>
-import Subscribe from './Subscribe'; 
-
-
+import Subscribe from "./Subscribe";
 
 export default {
   name: "Header",
   components: {
-    Subscribe,
+    Subscribe
   },
-  data(){
+  data() {
     return {
-      showModal: false,
-    }
+      showModal: false
+    };
   }
 };
 </script>
