@@ -1,19 +1,34 @@
 <template>
-    <div class="card">
-      <img class="card-img-top shadow pl-1 pr-1" src="/img/2016NissanGT-R.png" alt="Nissan Skyline">
-      <div class="card-body">
-        <h4 class="card-title">GT-R</h4>
-        <p class="card-text">This is a 2016 Nissan GT-R</p>
-        <a href="#" class="btn btn-primary btn-lg">Rent</a>
-      </div>
-    </div>
+<div>
+  <b-card
+    :title="carObj.model"
+    :img-src="carObj.img"
+    :img-alt="carDetails"
+    img-top
+    :tag="carDetails"
+    style="max-width: 20rem;"
+    class="mb-2"
+  >
+    <b-card-text>
+      {{carObj.year}} {{carObj.make}} {{carObj.model}}.
+    </b-card-text>
+
+    <router-link to="/confirmation" class="btn btn-primary btn-lg">Rent</router-link>
+  </b-card>
+</div>
 </template>
 
 <script>
 export default {
   name: 'carCards',
   props: {
-    
+    carObj: Object
+      
+  },
+  computed: {
+    cardetails(){
+      return this.carObj.make + " " + this.carObj.model
+    }
   }
 }
 </script>
@@ -22,10 +37,13 @@ export default {
 <style scoped>
 .card {
   background-color: rgb(112, 112, 112);
+  color:aliceblue
 }
 img {
   max-width: 100%;
   height: auto;
   background-color: silver;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 </style>
