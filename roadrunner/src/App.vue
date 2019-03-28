@@ -4,10 +4,7 @@
   
     <div id="nav">
       <router-link to="/">Home</router-link> |
-<<<<<<< HEAD
-=======
       <router-link to="/confirmation">About</router-link>
->>>>>>> a690d7087eb930945b14d04d9b64f2ad3e7547bd
     </div>
     <router-view/>
     
