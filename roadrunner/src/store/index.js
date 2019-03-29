@@ -9,7 +9,7 @@ Vue.use(Vuex)
 const state = { 
     cars: [
       {
-        id: "C1",
+        id: "1",
         make: "Nissan",
         model: "GT-R",
         year: "2016",
@@ -20,7 +20,7 @@ const state = {
         location: []
       },
       {
-        id: "C2",
+        id: "2",
         make: "Bentley",
         model: "Continental",
         year: "2015",
@@ -31,7 +31,7 @@ const state = {
         location: []
       },
       {
-        id: "C3",
+        id: "3",
         make: "Ferrai",
         model: "Spider",
         year: "2015",
@@ -42,7 +42,7 @@ const state = {
         location: []
       },
       {
-        id: 'C4',
+        id: '4',
         make: "BMW",
         model: "I8",
         year: "2016",
@@ -53,7 +53,7 @@ const state = {
         location: []
       },
       {
-        id: "C5",
+        id: "5",
         make: "Lamborghini",
         model: "Huracan",
         year: "2016",
@@ -64,7 +64,7 @@ const state = {
         location: []
       },
       {
-        id: "C6",
+        id: "6",
         make: "Mclaren",
         model: "650s Spider",
         year: "2016",
@@ -75,7 +75,7 @@ const state = {
         location: []
       },
       {
-        id: "C7",
+        id: "7",
         make: "Porsche",
         model: "911",
         year: "2016",
@@ -86,7 +86,7 @@ const state = {
         location: []
       },
       {
-        id: "C8",
+        id: "8",
         make: "Lamborghini",
         model: "Aventador",
         year: "2017",
@@ -97,7 +97,7 @@ const state = {
         location: []
       },
       {
-        id: "C9",
+        id: "9",
         make: "Lamborghini",
         model: "Huracan Spyder",
         year: "2017",
@@ -108,7 +108,7 @@ const state = {
         location: []
       },
       {
-        id: "C10",
+        id: "10",
         make: "Ferrari",
         model: "488 Spider",
         year: "2018",
@@ -147,6 +147,11 @@ export default new Vuex.Store({
   getters: {
     promotedCars: state => {
       return state.cars.filter(cars => cars.isPromo)
-    }
-  }
+    },
+    currentCar(state){
+      return id => state.cars.filter(cars => {
+        return cars.id === id
+        });
+      }
+    },
 })
