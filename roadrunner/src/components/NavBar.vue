@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info" class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="/img/logo3.png">
+        <img src="/img/logo4.png">
       </a>
 
       <b-navbar-toggle target="nav_collapse"/>
@@ -17,7 +17,7 @@
         </b-navbar-nav>
 
         <b-navbar-nav>
-          <b-navbar-brand href="#inventory">INVENTORY</b-navbar-brand>
+          <b-navbar-brand href="/#inventory">INVENTORY</b-navbar-brand>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
