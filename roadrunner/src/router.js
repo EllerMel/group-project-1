@@ -21,7 +21,10 @@ export default new Router({
       // this generates a separate chunk (confirmation.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: Confirmation,
-      props: { carObject: Object }
+      props: (route) => {
+        const carID = Number.parseInt(route.params.carID)
+        return {carID}
+      },
     }
   ]
 })
