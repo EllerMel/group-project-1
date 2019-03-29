@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import mutations from './mutations'
+import { mutations, STORAGE_KEY_USERS } from './mutations'
 import actions from './actions'
 import plugins from './plugins'
 
@@ -121,22 +121,15 @@ const state = {
     ],
     users: [
       {
-        name: "name",
-        email: "email address",
-        age: 34,
-        phone: "895-555-5555",
-        password: "password",
-        senior: false
-      },
-      {
-        name: "name",
-        email: "email address",
-        age: 66,
-        phone: "895-555-5555",
-        password: "password",
-        senior: true
+        name: "",
+        email: "",
+        age: "",
+        phone: "",
+        password: "",
+        memberType: ""
       }
     ],
+    allUsers: JSON.parse(window.localStorage.getItem(STORAGE_KEY_USERS) || '[]'),
 }
 
 export default new Vuex.Store({
@@ -154,4 +147,7 @@ export default new Vuex.Store({
         });
       }
     },
+    // created (){
+    //   console.log(JSON.stringify(this.users));
+    // }
 })
