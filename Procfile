@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 web/
+roadrunner: vendor/bin/heroku-php-apache2 roadrunner/
