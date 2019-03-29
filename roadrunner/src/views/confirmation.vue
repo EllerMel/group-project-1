@@ -2,12 +2,12 @@
 <template>
   <div class="confirmation">
   <DetailCard></DetailCard>
-  <div class="container-fluid">
+  <div class="jumbotron jumbotron fluid" id="jumboReserve">
     <div class="row">
       <div class="col"></div>
         <div class="col">
           <div>
-            <h3> Reviews </h3>
+            <h1> REVIEWS </h1>
             <br>
             <p v-if="!reviews.length">There are no reviews yet.</p>
               <ul v-else>
@@ -28,6 +28,8 @@
     </div>
   </div>
 
+  <Footer></Footer>
+
 
   </div>
 </template> 
@@ -37,6 +39,7 @@
     
   import DetailCard from '../components/DetailCard.vue';
   import Review from '../components/Review';
+  import Footer from '../components/Footer';
 
 
 
@@ -46,6 +49,7 @@ export default {
 
     DetailCard,
     Review,
+    Footer
 
   },
   data(){
@@ -61,4 +65,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+h1 {
+   font-family: "Fugaz One", cursive;
+   font-size: 60px;
+   
+}
 
+#jumboReserve {
+   background-color: #a6b9cc77;
+}
+</style>

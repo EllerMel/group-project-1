@@ -1,11 +1,22 @@
 <template>
   <div>
-    <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="featuredCars">
-      <div class="mt-4">
+   
+    <br>
+    <div class="jumbotron jumbotron fluid" id="featuredCars">
+       <h1>LEARN MORE</h1>
+       <br>
+
+      <div class="row">
+        <div class="col">
+
+     
         <b-card :img-src="carObj.img" img-alt="carDetails" img-left class="mb-3">
           <b-card-text>
+           
             <ul>
               <li>
+                <h3><strong>DETAILS:</strong></h3>
+                <br>
                 <strong>Make:</strong>
                 {{ carObj.make }}
               </li>
@@ -21,14 +32,20 @@
                 <strong>Color:</strong>
                 {{ carObj.color }}
               </li>
-              <li><button>Drive Me!</button></li>
+              <br>
+              <li><button id="reserve">RESERVE</button></li>
             </ul>
+           
           </b-card-text>
         </b-card>
+        
+      </div>
       </div>
     </div>
     <div>
-      <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="featuredCars">
+      <div class="jumbotron jumbotron fluid">
+        <h1> PICK UP LOCATION </h1>
+        <br>
         <iframe width: src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28327.23730047265!2d-84.48043223607823!3d38.02851689037736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x92c7783d2b2a2d15!2sAwesome+Inc!5e0!3m2!1sen!2sus!4v1553782384275!5m2!1sen!2sus" width="95%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
@@ -65,6 +82,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+#featuredCars {
+  background-color:  #a6b9cc77;
+}
+
+h1 {
+   font-family: "Fugaz One", cursive;
+   font-size: 60px;
+}
+
+
 body {
   font-family: tahoma;
   color: #282828;
@@ -81,12 +109,13 @@ img {
 }
 
 button {
+
   margin-top: 30px;
   border: none;
   background-color: #1e95ea;
   color: white;
   height: 60px;
-  width: 100px;
+  width: 200px;
   font-size: 16px;
 }
 
