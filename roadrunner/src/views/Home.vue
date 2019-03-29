@@ -13,20 +13,7 @@
       </b-card-group>
   </div>
   <AboutUs></AboutUs>
-  <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="inventory">
-    <!-- <Search class="pb-3" id="inventory"></Search> -->
-    <h1>Choose Your Own Adventure</h1>
-    <b-card-group deck>
-        <carCards v-for="carObj in cars" v-bind:carObj="carObj" :key="carObj.id"></carCards>
-    </b-card-group>
-  </div>
-  <Footer></Footer>
-
-
-
-    <AboutUs></AboutUs>
-    
-    <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="inventoryCars">
+  <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="inventoryCars">
       <br>
       <h1 id="meetFleet"><strong>MEET THE FLEET</strong></h1>
       <br>
@@ -35,7 +22,7 @@
         <carCards v-for="carObj in cars" v-bind:carObj="carObj" :key="carObj.id"></carCards>
       </b-card-group>
     </div>
-    <Footer></Footer>
+    <Footer></Footer>  
   </div>
 </template>
 
