@@ -6,7 +6,7 @@
       <h1>ROAD-RUNNER</h1>
       <h3>EXOTIC CAR RENTAL</h3>
 
-      <a href="#inventory" class="btn btn-dark btn-lg">SEARCH</a>
+      <a href="/#meetFleet" class="btn btn-dark btn-lg">SEARCH</a>
       <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
       <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
 

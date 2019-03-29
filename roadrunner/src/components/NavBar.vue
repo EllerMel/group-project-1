@@ -17,7 +17,7 @@
         </b-navbar-nav>
 
         <b-navbar-nav>
-          <b-navbar-brand href="/#inventory">INVENTORY</b-navbar-brand>
+          <b-navbar-brand href="/#meetFleet">INVENTORY</b-navbar-brand>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
