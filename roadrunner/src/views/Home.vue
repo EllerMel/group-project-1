@@ -19,7 +19,8 @@
     <div class="container shadow-lg pl-5 p-3 mb-5 rounded" id="inventoryCars">
       <br>
       <h1 id="meetFleet"><strong>MEET THE FLEET</strong></h1>
-      <Search class="pb-3" id="inventory"></Search>
+      <br>
+      <!-- <Search class="pb-3" id="inventory"></Search> -->
       <b-card-group deck>
         <carCards v-for="carObj in cars" v-bind:carObj="carObj" :key="carObj.id"></carCards>
       </b-card-group>
