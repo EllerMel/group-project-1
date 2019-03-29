@@ -33,13 +33,16 @@
                     <p>Please select one of the membership types below:</p>
                     <div class="radio">
                       <label>
-                        <b-form-radio v-model="selected" name="some-radios" value="A">Standard</b-form-radio>
-                    
+                        <b-form-radio v-model="selected" name="memberType" value="Standard" checked="checked">Standard</b-form-radio>
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                       <b-form-radio v-model="selected" name="some-radios" value="A">Senior: For individuals 65+</b-form-radio>
+                        <b-form-radio
+                          v-model="selected"
+                          name="memberType"
+                          value="Senior"
+                        >Senior: For individuals 65+</b-form-radio>
                       </label>
                     </div>
                     <br>
@@ -143,18 +146,18 @@ export default {
       age: "",
       phone: "",
       password: "",
-      senior: false
+      selected: false
     };
   },
   methods: {
     reset() {
       (this.name = ""),
-        (this.email = ""),
-        (this.age = ""),
-        (this.phone = ""),
-        (this.password = "");
+      (this.email = ""),
+      (this.age = ""),
+      (this.phone = ""),
+      (this.password = "");
     },
-    checkForm: function(e) {
+    checkForm: function() {
       if (this.name && this.email && this.age && this.phone && this.password) {
         this.$emit("close");
         this.$router.push({ name: "home" });
@@ -167,8 +170,6 @@ export default {
       }
       if (!this.email) {
         this.errors.push("Email required.");
-      } else if (!this.validEmail(this.email)) {
-        this.errors.push("Valid email required.");
       }
       if (!this.age) {
         this.errors.push("Age is required");
@@ -179,12 +180,25 @@ export default {
       if (!this.password) {
         this.errors.push("Password is required");
       }
-
-      //e.preventDefault();
+      
+      if(!Boolean(this.errors.length)) {
+        this.addUser()
+      } 
     },
-    validEmail: function(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
+    addUser() {
+      this.$store.dispatch("addUserAction", {
+        name: this.name,
+        email: this.email,
+        age: this.age,
+        phone: this.phone,
+        password: this.password,
+        memberType: this.selected
+      });
+    }
+  },
+  computed: {
+    allUsers() {
+      return this.$store.state.allUsers;
     }
   }
 };
