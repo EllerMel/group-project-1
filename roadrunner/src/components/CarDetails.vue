@@ -1,44 +1,6 @@
 <template>
   <div class="confirmation">
 
-    <div class="product">
-      <div class="product-image" width="50%">
-        <img :src="image">
-      </div>
-    
-      <div class="product-info">
-        <h1>{{ product }}</h1>
-        <p v-if="inStock">In Stock</p>
-        <p v-else>Out of Stock</p>
-        <p>Availability: {{ shipping }}</p>
-
-    <ul>
-      <li v-for="detail in details">{{ detail }}</li>
-    </ul>
-
-        <product-details :details="details"></product-details>
-
-        <button
-          v-on:click="RentMe"
-          :disabled="!inStock"
-          :class="{ disabledButton: !inStock }" 
-
-        >Reserve Me!</button>
-
-      </div>
-    </div>
-    <div class="span8" id="map">
-      <iframe
-        width="50%"
-        height="350"
-        frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12568.261848416902!2d-84.49599825000001!3d38.04556099999999!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1553192935061"
-      ></iframe>
-  </div>
-
   <div class="container-fluid">
     <div class="row">
       <div class="col"></div>
@@ -71,58 +33,12 @@
 
     <script>
 import Review from "./Review";
-
 export default {
   name: "details",
   components: {
-    Review
+    Review,
   },
-  data() {
-    return {
-      product: "Details",
-      brand: "Vue Mastery",
-      selectedVariant: 0,
-      details: ["Make:", "model:", "Color:", "Rented:"],
-      variants: [
-        {
-          variantId: 2234,
-          variantImage: 'img/2015BentleyContinentalGTC.png',
-          variantQuantity: 3
-        }
-      ],
-      cart: 0, 
-      reviews: []
-    };
-  },
-  methods: {
-    RentMe: function() {
-      this.cart += 1;
-    },
-    updateProduct: function(index) {
-      this.selectedVariant = index;
-    },
-    addReview(productReview) {
-      console.log(productReview);
-      this.reviews.push(productReview)
-    },
-  },
-  computed: {
-    title() {
-      return this.brand + " " + this.product;
-    },
-    image() {
-      return this.variants[this.selectedVariant].variantImage;
-    },
-    inStock() {
-      return this.variants[this.selectedVariant].variantQuantity;
-    },
-    shipping() {
-      if (this.premium) {
-        return "Available";
-      }
-    
-    }
-  }
+  
 };
 </script>
 
