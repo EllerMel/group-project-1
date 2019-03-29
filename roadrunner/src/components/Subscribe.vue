@@ -33,12 +33,13 @@
                     <p>Please select one of the membership types below:</p>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optradio" checked="checked"> Standard
+                        <b-form-radio v-model="selected" name="some-radios" value="A">Standard</b-form-radio>
+                    
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="optradio"> Senior - For individuals 65 years and up
+                       <b-form-radio v-model="selected" name="some-radios" value="A">Senior: For individuals 65+</b-form-radio>
                       </label>
                     </div>
                     <br>
@@ -114,7 +115,12 @@
               <div class="modal-footer">
                 <slot name="footer">
                   <!-- default footer -->
-                  <button class="btn btn-primary" type="button" @click="checkForm" value="Submit">Submit</button>
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    @click="checkForm"
+                    value="Submit"
+                  >Submit</button>
                   <button type="button" class="btn btn-default" @click="reset">Reset</button>
                 </slot>
               </div>
@@ -150,8 +156,8 @@ export default {
     },
     checkForm: function(e) {
       if (this.name && this.email && this.age && this.phone && this.password) {
-        this.$emit('close');
-        this.$router.push({name: "home"});
+        this.$emit("close");
+        this.$router.push({ name: "home" });
       }
 
       this.errors = [];
@@ -160,9 +166,9 @@ export default {
         this.errors.push("Name is required");
       }
       if (!this.email) {
-        this.errors.push('Email required.');
+        this.errors.push("Email required.");
       } else if (!this.validEmail(this.email)) {
-        this.errors.push('Valid email required.');
+        this.errors.push("Valid email required.");
       }
       if (!this.age) {
         this.errors.push("Age is required");
@@ -185,6 +191,13 @@ export default {
 </script>
 
 <style>
+input [type="radio"] {
+  min-width: 16px;
+  min-height: 16px;
+  vertical-align: text-bottom;
+  margin-top: 2px;
+}
+
 .modal-mask {
   position: fixed;
   z-index: 9998;
