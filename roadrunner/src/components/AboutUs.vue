@@ -5,7 +5,7 @@
         <div class="col" id="about2">
          
             <h1 id="AboutUs">
-              <strong>About Us</strong>
+              <strong>ABOUT US</strong>
             </h1>
             <br>
          
@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col">
               <h1>
-                <strong>How It Works</strong>
+                <strong>HOW IT WORKS</strong>
               </h1>
             </div>
           </div>
@@ -75,6 +75,11 @@
 
 
 <style scoped>
+h1 {
+   font-family: "Fugaz One", cursive;
+}
+
+
 #subscribe, #browse, #reserve {
   font-size: x-large;
 }

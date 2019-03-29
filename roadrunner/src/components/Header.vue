@@ -4,12 +4,12 @@
 
     <div class="text-block">
       <h1>ROAD-RUNNER</h1>
-      <h3>Exotic Car Rental</h3>
-      
-      <a href="#inventory" class="btn btn-dark btn-lg">SEARCH</a>
-       <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
-            <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
-  
+      <h3>EXOTIC CAR RENTAL</h3>
+
+      <a href="/#meetFleet" class="btn btn-dark btn-lg">SEARCH</a>
+      <button id="show-modal" @click="showModal = true" class="btn btn-dark btn-lg">SUBSCRIBE</button>
+      <Subscribe v-if="showModal" @close="showModal = false"></Subscribe>
+
       <br>
       <br>
     </div>
@@ -17,14 +17,19 @@
 </template>
 
 <style scoped>
-h1,
+h1 {
+  font-family: "Fugaz One", cursive;
+  font-size: 60px;
+}
+
 h3,
 .btn {
   font-family: "Fugaz One", cursive;
 }
+
 .btn {
   background-color: #555;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
 }
 
@@ -63,10 +68,11 @@ h3,
     background-color: rgba(21, 22, 22, 0.7);
 
     color: white;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -74,7 +80,7 @@ h3,
   .text-block {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 15px;
     background-color: rgba(21, 22, 22, 0.7);
 
     color: white;
@@ -88,9 +94,9 @@ h3,
 @media (min-width: 1200px) {
   .text-block {
     position: absolute;
-    bottom: 100px;
-    left: 180px;
-    background-color: rgba(21, 22, 22, 0.7);
+    bottom: 80px;
+    left: 100px;
+    background-color: rgba (52, 58, 64, 0.7);
 
     color: white;
     padding-left: 70px;
